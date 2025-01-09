@@ -59,3 +59,14 @@ jobs:
           -Dclient.id="${{ secrets.CONNECTED_CLIENT_ID }}" \ 
 
           -Dclient.secret="${{ secrets.CONNECTED_CLIENT_SECRET }}"
+
+      - name: Publish to Exchange
+        run: |
+          mvn deploy 
+         
+
+      - name: Deploy to CloudHub 2.0
+        run: |
+          mvn deploy -DmuleDeploy 
+        
+
