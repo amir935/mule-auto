@@ -41,8 +41,9 @@
 						<environment>${environment}</environment>
 						<target>${targetName}</target>
 						<muleVersion>${app.runtime}</muleVersion>
-						<username>Amir122324</username>
-						<password>Amir122306</password>
+						<connectedAppClientId>0793590c6a47494ea34a13e48d314484</connectedAppClientId>
+						<connectedAppClientSecret>cfA4C73BD629488aA39BE0C91bAD29A6</connectedAppClientSecret>
+						<ConnectedAppGrantType>client_credentials</ConnectedAppGrantType>
 						<applicationName>${appName}</applicationName>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
