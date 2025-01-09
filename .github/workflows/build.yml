@@ -28,11 +28,9 @@ jobs:
       - name: Publish to Exchange
         run: |
           mvn deploy 
-          -Dusername="Amir122324" 
-          -Dpassword="Amir122306"
+         
 
       - name: Deploy to CloudHub 2.0
         run: |
           mvn deploy -DmuleDeploy 
-          -Dusername="Amir122324" 
-          -Dpassword="Amir122306"
+        
