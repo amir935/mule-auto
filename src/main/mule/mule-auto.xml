@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+	
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="aa10257a-260b-427f-9168-df21c56b7a9c" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<configuration-properties doc:name="Configuration properties" doc:id="6bee0ab2-bb41-41c6-b80c-46c44f13a32e" file="dev.yaml" />
+	<flow name="amirFlow" doc:id="93ff6d64-ad88-4220-9ae1-4f9bf195719b" >
+		<http:listener doc:name="Listener" doc:id="063b3e8c-ca7d-4834-881d-4203a48af917" config-ref="HTTP_Listener_config" path="path"/>
+		<set-payload value='#["Amir"]' doc:name="Set Payload" doc:id="9dd50fd7-2316-4099-b7a8-a5daa5c14c4c" />
+	</flow>
+	
+	
+	
+	</mule>
